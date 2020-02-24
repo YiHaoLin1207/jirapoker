@@ -20,7 +20,7 @@ def sign_in():
 
     user = User()
     user.accountId = user_profile['accountId']
-    user.userName = user_profile['key']
+    user.userName = user_profile['displayName']
     user.avatarUrl = user_profile['avatarUrls']['48x48']
 
     queried_user = jirapoker_db.user.find_one({'userName': user.userName})
